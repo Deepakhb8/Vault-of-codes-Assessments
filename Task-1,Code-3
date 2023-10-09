@@ -2,7 +2,7 @@ def read_and_write_file(filename):
     try:
         with open(filename, 'r') as file:
             content = file.read()
-        with open(filename, 'a') as file:             # Use 'a' mode to append rather than overwrite
+        with open(filename, 'a') as file:             #  a instead of with to append and not overwrite the contents 
             file.write(content.upper())
         print(f"File '{filename}' processed successfully.")
     except FileNotFoundError:
