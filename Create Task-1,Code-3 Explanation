@@ -1,0 +1,69 @@
+The code you provided is a Python function called read_and_write_file() that takes a filename
+as input and reads the contents of the file, converts all of the text to uppercase, and then 
+appends the converted text back to the file. The function also prints a message to the console 
+indicating whether the file was processed successfully or not.
+
+The main() function simply calls the read_and_write_file() function with the filename "sample.txt".
+
+Here is a breakdown of the code:-
+
+def read_and_write_file(filename):
+This is the definition of the read_and_write_file() function.
+It takes a filename as input and returns nothing.
+
+try:
+This is a try block. 
+It is used to handle any errors that may occur while executing the code inside the block.
+
+with open(filename, 'r') as file:
+This opens the file for reading using the open() function.
+The with statement ensures that the file is closed automatically after it is no longer needed.
+
+content = file.read()
+This reads the entire contents of the file into a variable called content.
+
+with open(filename, 'a') as file:
+This opens the file for appending using the open() function.
+
+file.write(content.upper())
+This appends the converted text to the file.
+
+print(f"File '{filename}' processed successfully.")
+This prints a message to the console indicating that the file was processed successfully.
+
+except FileNotFoundError:
+This is an except block. It is used to handle the specific case of the file not being found.
+
+print(f"File '{filename}' not found.")
+This prints a message to the console indicating that the file was not found.
+
+
+except Exception as e:
+This is a catch-all except block. It is used to handle any other errors that may occur while executing the code inside the try block.
+
+print(f"An error occurred: {str(e)}")
+This prints a message to the console indicating that an error occurred and then prints the error message.
+
+def main():
+This is the definition of the main() function. It takes no input and returns nothing.
+
+filename = "sample.txt"
+read_and_write_file(filename)
+This calls the read_and_write_file() function with the filename "sample.txt".
+
+if __name__ == "__main__":
+  main()
+This is a Python idiom that is used to ensure that the main() function is 
+only called when the script is executed directly and not when it is imported as a module.
+
+To use the code, simply save it as a Python file (e.g. read_and_write_file.py) and then run it in a terminal or command prompt.
+For example, on macOS or Linux, you would run the following command:
+
+python read_and_write_file.py
+If the file "sample.txt" exists, the function will read its contents, convert all of the text to uppercase, and 
+then append the converted text back to the file.
+The function will then print a message to the console indicating that the file was processed successfully.
+
+If the file "sample.txt" does not exist, the function will print a message to the console indicating that the file was not found.
+
+If any other error occurs, the function will print a message to the console indicating that an error occurred and then print the error message.
