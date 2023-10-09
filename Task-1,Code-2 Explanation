@@ -1,0 +1,49 @@
+The Python code you provided is a function called get_age() that gets 
+the user's age from input and a main function that calls the get_age() 
+function and prints a message to the console depending on whether the user is eligible or not.
+
+Here is a breakdown of the code:
+
+def get_age():
+  age_str = input("Please enter your age: ")     
+  if age_str.isnumeric() and int(age_str) >= 18:
+    return int(age_str)
+  else:
+    return None
+
+The get_age() function takes no arguments and returns the user's age as an integer, 
+or None if the user's input is invalid. First, it prompts the user to enter their age.
+Then, it checks if the user's input is a numeric string. If it is, and the integer 
+value of the string is greater than or equal to 18, then the function returns the integer value of the string. 
+Otherwise, the function returns None.
+
+def main():
+  age = get_age()
+  if age is not None:                  
+   print(f"You are {age} years old and eligible.")
+  else:
+   print("Invalid input. You must be at least 18 years old.")
+
+The main() function takes no arguments and returns nothing.
+It first calls the get_age() function and assigns the returned value to the variable age.
+Then, it checks if the age variable is not None. If it is not,
+then the function prints a message to the console indicating that the user is eligible.
+Otherwise, the function prints a message to the console indicating that the user's input is invalid.
+
+if __name__ == "__main__":
+  main()
+
+The if __name__ == "__main__": block is a common way to ensure that the main() 
+function is only called when the script is run directly, and not when it is imported as a module.
+
+Here is an example of how to run the Python script:
+
+>>> main()
+Please enter your age: 25
+You are 25 years old and eligible.
+
+If the user enters an invalid age, the following output will be printed to the console:
+
+>>> main()
+Please enter your age: 17
+Invalid input. You must be at least 18 years old
