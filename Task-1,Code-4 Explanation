@@ -1,0 +1,75 @@
+The Python code you provided for the merge sort algorithm can be broken down as follows:
+
+def merge_sort(arr):
+  if len(arr) <= 1:
+    return arr
+This function definition defines a new function called merge_sort(),
+which takes an array as input and returns a sorted array as output.
+The function first checks if the length of the input array is less than or equal to 1. If it is, 
+then the array is already sorted and the function simply returns the array.
+
+mid = len(arr) // 2
+left = arr[:mid]
+right = arr[mid:]
+Next, the function calculates the middle element of the input array and stores it in the variable mid.
+The function then divides the input array into two halves at the middle element and stores
+the two halves in the variables left and right.
+
+merge_sort(left)
+merge_sort(right)
+The function then recursively calls itself on the two halves of the input array.
+This means that the function will recursively divide the array into smaller and
+smaller subarrays until each subarray contains only a single element.
+At that point, the subarrays will already be sorted and the function will simply return them.
+
+i = j = k = 0
+Next, the function declares three variables: i, j, and k. 
+These variables will be used to track the positions of 
+the elements in the two sorted halves of the input array and in the final sorted array, respectively.
+
+while i < len(left) and j < len(right):
+    if left[i] < right[j]:
+      arr[k] = left[i]
+      i += 1
+    else:
+      arr[k] = right[j]
+      j += 1
+    k += 1
+This while loop merges the two sorted halves of the input array into the final sorted array.
+The loop works by comparing the elements of the two halves one by one and copying the smaller
+element to the final sorted array. If the elements are equal, then the order of the elements is preserved.
+
+while i < len(left):
+    arr[k] = left[i]
+    i += 1
+    k += 1
+   
+  while j < len(right):
+    arr[k] = right[j]
+    j += 1
+    k += 1  
+  return arr # Return the sorted array
+After the while loop has finished, any remaining elements in the two sorted halves of the
+input array will be copied to the final sorted array.
+Finally, the function returns the final sorted array.
+
+This is a simplified breakdown of the merge sort algorithm.
+The merge sort algorithm you provided is correct and efficient. 
+It is a recursive algorithm that works by dividing the array into smaller subarrays,
+sorting each subarray, and then merging the sorted subarrays back together.
+The algorithm has a worst-case time complexity of O(n log n) and an average time complexity of O(n log n).
+It is also a stable sort, which means that it preserves the original order of equal elements in the array.
+
+The following output:
+
+The sorted array is: [3, 9, 10, 27, 38, 43, 82]
+Here is a breakdown of how the merge sort algorithm works on your example array:
+
+The array is divided into two equal halves: [38, 27, 43] and [3, 9, 82, 10].
+Each half is then recursively sorted using the merge sort algorithm.
+The two sorted halves are then merged together to form the final sorted array.
+The merging process is done by comparing the elements of the two halves one by one and 
+copying the smaller element to the final sorted array. If the elements are equal, then the order of the elements is preserved.
+
+The merge sort algorithm is a very efficient and versatile sorting algorithm.
+It is often used in real-world applications, such as sorting database records or files on a computer.
