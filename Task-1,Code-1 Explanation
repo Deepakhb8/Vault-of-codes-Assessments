@@ -1,0 +1,39 @@
+
+def reverse_string(s):
+  reversed_str = s[::-1]
+  return reversed_str
+
+The reverse_string() function takes a string as input and returns a reversed string. 
+It does this by using the Python slice syntax [::-1]. 
+This slice syntax tells Python to start at the end of the string, end at the beginning of the string, and move backwards with steps of -1.
+This effectively reverses the string.
+
+Here is an example of how to use the reverse_string() function:
+
+>>> reverse_string("Hello, world!")
+'!dlrow ,olleH'
+
+def main():
+  input_string = "Hello, world!"
+  reversed_string = reverse_string(input_string)
+  print(f"Reversed string: {reversed_string}"
+
+The main() function takes no arguments and returns nothing.
+It first creates a string variable called input_string and assigns it the value "Hello, world!".
+It then calls the reverse_string() function on the input_string variable and assigns the returned value to the variable reversed_string.
+Finally, it prints the reversed_string variable to the console using the f-string syntax.
+
+Here is an example of how to run the main() function:
+
+>>> main()
+Reversed string: !dlrow ,olleH
+
+if __name__ == "__main__":
+  main()
+
+The if __name__ == "__main__": block is a common way to ensure that the main() function is only called
+when the script is run directly, and not when it is imported as a module.
+
+This means that if you save the above code as a Python script (e.g. reverse_string.py) and run it in the terminal,
+the main() function will be called and the reversed string will be printed to the console.
+However, if you import the reverse_string() function into another Python script, the main() function will not be called.
