@@ -1,0 +1,39 @@
+Line 1: This line imports the string and collections modules.
+ The string module provides a variety of functions for working with strings, 
+ and the collections module provides a variety of data structures, including the Counter object.
+
+Line 3: This line defines a function called count_word_frequencies(),
+ which takes a text string as input and returns a dictionary of word frequencies.
+
+Lines 4-6: These lines implement the count_word_frequencies() function.
+ The function first removes punctuation from the text string and converts it to lowercase.
+ It then splits the text string into a list of words. Finally,
+ it creates a Counter object to count the frequency of each word in the list and returns the Counter object.
+
+Line 8: This line prompts the user to enter a text string.
+
+Line 9: This line calls the count_word_frequencies() function to count the
+ word frequencies in the text string entered by the user.
+
+Line 10: This line assigns the result of the count_word_frequencies()
+ function to the word_frequencies variable.
+
+Lines 12-14: These lines iterate over the dictionary of word frequencies and
+ print each word and its frequency to the console.
+ The f-string syntax is used to format the output.
+
+Here is a output
+>>> please enter the text engineering is the application of science and maths to solve problems in engineering
+
+engineering : 2
+is :1  
+the :1  
+application :1  
+of : 1 
+science : 1 
+and :1 
+maths :1 
+to :1 
+solve :1 
+problems :1 
+in :1  

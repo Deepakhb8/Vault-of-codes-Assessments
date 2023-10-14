@@ -1,0 +1,85 @@
+ 
+The functions are well-defined and modular, making the code easy to maintain and extend.
+
+Here are some specific comments:
+
+The display_list() function is clear and concise.
+ It checks if the to-do list is empty, and if not, it prints the list of tasks, numbered sequentially.
+
+The add_task() function is also clear and concise. 
+It splits the input string into a list of tasks, and then adds those tasks to the to-do list.
+It also prints a message to the user indicating how many tasks were added.
+
+The remove_task() function is a bit more complex, but it is still well-written. 
+It first validates the task index to make sure that it is within the bounds of the to-do list.
+ If the index is valid, it removes the task at that index and prints a message to the user indicating which task was removed.
+
+The main()
+function is the main entry point for the program. 
+It creates an empty to-do list and then displays a menu to the user. 
+
+The user can then select one of the following options:
+Display the to-do list
+Add tasks to the to-do list
+Remove a task from the to-do list
+Quit the program
+The main() function validates the user's input and then calls the appropriate function based on the user's selection.
+
+Overall, this is a well-written and easy-to-use Python to-do list program.
+
+Here is The output
+
+>>> Menu:
+    1. Display To-Do List
+    2. Add Task(s)
+    3. Remove Task
+    4. Quit
+    Enter your choice (1/2/3/4): 2
+    Enter task(s) separated by commas:  python, programming, internship, useful, to, our, Career
+    7 tasks added to the to-do list.
+
+    Menu:
+    1. Display To-Do List
+    2. Add Task(s)
+    3. Remove Task
+    4. Quit
+    Enter your choice (1/2/3/4): 1
+    To-Do List:
+    1. python
+    2. programming
+    3. internship
+    4. useful
+    5. to
+    6. our
+    7. Career
+
+    Menu:
+    1. Display To-Do List
+    2. Add Task(s)
+    3. Remove Task
+    4. Quit
+    Enter your choice (1/2/3/4): 3
+    Enter the task index to remove: 2
+    Task 'programming' removed from the to-do list.
+
+    Menu:
+    1. Display To-Do List
+    2. Add Task(s)
+    3. Remove Task
+    4. Quit
+    Enter your choice (1/2/3/4): 1
+    To-Do List:
+    1. python
+    2. internship
+    3. useful
+    4. to
+    5. our
+    6. Career
+
+    Menu:
+    1. Display To-Do List
+    2. Add Task(s)
+    3. Remove Task
+    4. Quit
+    Enter your choice (1/2/3/4): 4
+    Quit!
