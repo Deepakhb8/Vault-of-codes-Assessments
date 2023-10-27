@@ -1,0 +1,64 @@
+import csv
+import matplotlib.pyplot as plt
+
+# Initialize an empty list to store expenses
+expenses = []
+
+# Function to record an expense
+def record_expense():
+    date = input("Enter the date (YYYY-MM-DD): ")
+    description = input("Enter a description: ")
+    category = input("Enter the category: ")
+    amount = float(input("Enter the amount: Rs"))
+
+    expense = [date, description, category, amount]
+    expenses.append(expense)
+
+# Function to save expenses to a CSV file
+def save_expenses():
+    with open('expenses.csv', 'w', newline='') as csvfile:
+        csv_writer = csv.writer(csvfile)
+        csv_writer.writerow(["Date", "Description", "Category", "Amount"])
+        csv_writer.writerows(expenses)
+        print("Expenses saved to expenses.csv")
+
+# Function to plot expenses as a bar graph
+def plot_expenses():
+    categories = []
+    amounts = []
+
+    for expense in expenses:
+        categories.append(expense[2])  # Category
+        amounts.append(expense[3])  # Amount
+
+    plt.bar(categories, amounts)
+    plt.xlabel('Categories')
+    plt.ylabel('Amount (Rs)')
+    plt.title('Expense Distribution')
+    plt.xticks(rotation=45)
+    plt.show()
+
+# Main loop
+while True:
+    print("\nExpense Tracker Menu:")
+    print("1. Record an Expense")
+    print("2. View Expenses")
+    print("3. Save Expenses to a File")
+    print("4. Plot Expenses")
+    print("5. Exit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == "1":
+        record_expense()
+    elif choice == "2":
+        for expense in expenses:
+            print(expense)
+    elif choice == "3":
+        save_expenses()
+    elif choice == "4":
+        plot_expenses()
+    elif choice == "5":
+        break
+    else:
+        print("Invalid choice. Please choose a valid option.")
